@@ -1,7 +1,7 @@
 const { readdirSync } = require("fs");
 const formidable = require('express-formidable');
 const path = require("path");
-require('dotenv').config();
+require('dotenv').config({path : "./config.env"});
 require('express-async-errors'); //no need any try catch for this package
 const express = require('express');
 const app = express();

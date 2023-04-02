@@ -142,3 +142,9 @@ exports.updateBannerImage = async (req, res) => {
   await image.save();
   return res.status(StatusCodes.OK).send('Banner Image updated successfully');
 }
+
+// delete all images
+exports.deleteAllImages = async (req, res) => {
+  await Image.deleteMany({});
+  return res.status(StatusCodes.OK).send('All images deleted successfully');
+}

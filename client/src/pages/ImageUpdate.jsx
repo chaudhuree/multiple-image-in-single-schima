@@ -13,7 +13,7 @@ export default function ImageUpdate() {
 
   }, [])
   const loadId = async () => {
-    const { data } = await axios.get('http://localhost:5000/api/v1/images');
+    const { data } = await axios.get('https://multiple-image-in-single-schima.vercel.app/api/v1/images');
     setId(data);
   }
   const handleProfileImageChange = (event) => {
@@ -32,17 +32,17 @@ export default function ImageUpdate() {
     if (profile) {
       const formData = new FormData();
       profile && formData.append("photo", profile);
-      await axios.post(`http://localhost:5000/api/v1/updateProfileImage/${id}`, formData);
+      await axios.post(`https://multiple-image-in-single-schima.vercel.app/api/v1/updateProfileImage/${id}`, formData);
     }
     if (portfolio) {
       const formData = new FormData();
       portfolio && formData.append("photo", portfolio);
-      await axios.post(`http://localhost:5000/api/v1/updatePortfolioImage/${id}`, formData);
+      await axios.post(`https://multiple-image-in-single-schima.vercel.app/api/v1/updatePortfolioImage/${id}`, formData);
     }
     if (banner) {
       const formData = new FormData();
       banner && formData.append("photo", banner);
-      await axios.post(`http://localhost:5000/api/v1/updateBannerImage/${id}`, formData);
+      await axios.post(`https://multiple-image-in-single-schima.vercel.app/api/v1/updateBannerImage/${id}`, formData);
     }
 
     navigate('/')

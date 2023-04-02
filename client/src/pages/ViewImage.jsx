@@ -11,11 +11,11 @@ export default function ViewImage() {
 
   }, [])
   const loadId = async () => {
-    const { data } = await axios.get('http://localhost:5000/api/v1/images');
+    const { data } = await axios.get('https://multiple-image-in-single-schima.vercel.app/api/v1/images');
     setId(data);
   }
   const deleteall = async () => {
-    await axios.get('http://localhost:5000/api/v1/delete');
+    await axios.get('https://multiple-image-in-single-schima.vercel.app/api/v1/delete');
     setId(null);
   }
   
@@ -24,15 +24,15 @@ export default function ViewImage() {
       {id && <div className='row'>
 
         <div className="col-md-4 mb-3">
-          <img className="img-fluid" src={`http://localhost:5000/api/v1/profileImage/${id}?${new Date().getTime()}`} alt="profileImage" />
+          <img className="img-fluid" src={`https://multiple-image-in-single-schima.vercel.app/api/v1/profileImage/${id}?${new Date().getTime()}`} alt="profileImage" />
 
         </div>
         <div className="col-md-4 mb-3">
-          <img className="img-fluid" src={`http://localhost:5000/api/v1/portfolioImage/${id}?${new Date().getTime()}`} alt="profileImage" />
+          <img className="img-fluid" src={`https://multiple-image-in-single-schima.vercel.app/api/v1/portfolioImage/${id}?${new Date().getTime()}`} alt="profileImage" />
 
         </div>
         <div className="col-md-4 mb-3">
-          <img className="img-fluid" src={`http://localhost:5000/api/v1/bannerImage/${id}?${new Date().getTime()}`} alt="profileImage" />
+          <img className="img-fluid" src={`https://multiple-image-in-single-schima.vercel.app/api/v1/bannerImage/${id}?${new Date().getTime()}`} alt="profileImage" />
 
         </div>
 

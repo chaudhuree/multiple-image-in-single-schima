@@ -30,7 +30,7 @@ const ImageUploader = () => {
     formData.append('banner', banner);
 
     try {
-      await axios.post("http://localhost:5000/api/v1/upload", formData, {
+      await axios.post("https://multiple-image-in-single-schima.vercel.app/api/v1/upload", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
